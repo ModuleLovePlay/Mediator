@@ -14,9 +14,11 @@
 		A78EED021EF49ED0006F560F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78EED011EF49ED0006F560F /* Assets.xcassets */; };
 		A78EED051EF49ED0006F560F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78EED031EF49ED0006F560F /* LaunchScreen.storyboard */; };
 		A78EED0F1EF4A20A006F560F /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = A78EED0E1EF4A20A006F560F /* Mediator.m */; };
+		F6502F393120DF90DF2A9A14 /* libPods-Mediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B27DB563FB9CB544169B14 /* libPods-Mediator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F0085139B272EF6BF036065 /* Pods-Mediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mediator/Pods-Mediator.release.xcconfig"; sourceTree = "<group>"; };
 		A78EECF21EF49ED0006F560F /* Mediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78EECF61EF49ED0006F560F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A78EECF81EF49ED0006F560F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		A78EED061EF49ED0006F560F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A78EED0D1EF4A20A006F560F /* Mediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
 		A78EED0E1EF4A20A006F560F /* Mediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mediator.m; sourceTree = "<group>"; };
+		A9B27DB563FB9CB544169B14 /* libPods-Mediator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mediator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8A23CD2AFA5385BAACCB2B /* Pods-Mediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mediator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mediator/Pods-Mediator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6502F393120DF90DF2A9A14 /* libPods-Mediator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117EC413DBA3887DA5139179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9B27DB563FB9CB544169B14 /* libPods-Mediator.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		674D34A1BB8A8CFA6AEA47E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF8A23CD2AFA5385BAACCB2B /* Pods-Mediator.debug.xcconfig */,
+				8F0085139B272EF6BF036065 /* Pods-Mediator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A78EECE91EF49ED0006F560F = {
 			isa = PBXGroup;
 			children = (
 				A78EECF41EF49ED0006F560F /* Mediator */,
 				A78EECF31EF49ED0006F560F /* Products */,
+				674D34A1BB8A8CFA6AEA47E0 /* Pods */,
+				117EC413DBA3887DA5139179 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A78EED091EF49ED0006F560F /* Build configuration list for PBXNativeTarget "Mediator" */;
 			buildPhases = (
+				525FA8DCF0EE608E00E748F8 /* [CP] Check Pods Manifest.lock */,
 				A78EECEE1EF49ED0006F560F /* Sources */,
 				A78EECEF1EF49ED0006F560F /* Frameworks */,
 				A78EECF01EF49ED0006F560F /* Resources */,
+				E5EA3A4C4DB7684E1AA33542 /* [CP] Embed Pods Frameworks */,
+				7C19E6B9BCE0B254FAE0AF17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +184,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		525FA8DCF0EE608E00E748F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C19E6B9BCE0B254FAE0AF17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mediator/Pods-Mediator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5EA3A4C4DB7684E1AA33542 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mediator/Pods-Mediator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A78EECEE1EF49ED0006F560F /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		A78EED0A1EF49ED0006F560F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8A23CD2AFA5385BAACCB2B /* Pods-Mediator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mediator/Info.plist;
@@ -295,6 +371,7 @@
 		};
 		A78EED0B1EF49ED0006F560F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0085139B272EF6BF036065 /* Pods-Mediator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mediator/Info.plist;

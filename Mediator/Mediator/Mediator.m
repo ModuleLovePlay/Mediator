@@ -29,8 +29,8 @@
              params:(NSDictionary *)params
       isCacheTarget:(BOOL)isCacheTarget
 {
-    NSString *targetClassString = [@"Target_" stringByAppendingString:targetName];
-    NSString *actionSelString = [@"Action_" stringByAppendingString:actionName];
+    NSString *targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
+    NSString *actionSelString = [NSString stringWithFormat:@"Action_%@:", actionName];
     //1.target
     Class targetClass = nil;
     NSObject *target = self.cachedTargetMap[targetClassString];
@@ -63,7 +63,7 @@
 
 - (void)releaseCacheTarget:(NSString *)targetName
 {
-    NSString *targetClassString = [@"Target_" stringByAppendingString:targetName];
+    NSString *targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
     [self.cachedTargetMap removeObjectForKey:targetClassString];
 }
 
